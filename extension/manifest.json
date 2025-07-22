@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Private RTL",
+  "description": "Toggle right-to-left layout across websites with special support for chatgpt.com",
+  "version": "1.0",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["rtl.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Private RTL"
+  }
+}
